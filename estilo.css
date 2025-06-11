@@ -1,0 +1,147 @@
+/* ================================
+   Estilos base
+================================ */
+
+body {
+  background: #2e2e2e;
+  color: #d0d0d0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+a {
+  color: #f27c00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff9c1a;
+} 
+
+a:active {
+  color: #ff4500;
+}
+
+/* ================================
+   Menu de navegacion
+================================ */
+
+nav.menu {
+  background: #1b1b1b;
+  padding: 10px 20px;
+}
+
+nav.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+
+nav.menu ul li a {
+  color: #f27c00;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav.menu ul li a:hover {
+  color: #ff9c1a;
+}
+
+nav.menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f27c00;
+  transition: width 0.3s ease;
+}
+
+nav.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   Posts
+================================ */
+
+.post-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+  max-width: 1100px;
+}
+
+.post {
+  background: #3a3a3a;
+  border-radius: 6px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  box-shadow: 0 0 8px rgba(242, 124, 0, 0.5);
+  max-width: 1000px;
+  overflow: visible;
+  position: relative;
+}
+
+.post h3 {
+  color: #f27c00;
+}
+
+.post .author {
+  font-size: 0.9em;
+  color: #a0a0a0;
+  margin-bottom: 12px;
+}
+
+.post-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(242, 124, 0, 0.7);
+  border: 2px solid #f27c00;
+  margin-left: 40px;
+  align-self: center;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.post-img:hover {
+  transform: translateY(-5px);
+}
+
+.post-img.expanded {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin: 20px 0;
+  border-radius: 6px;
+  z-index: 1;
+  position: relative;
+}
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  border-top: 1px solid #444;
+  font-size: 15px;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Lambda: ¿más que un símbolo?</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>Lambda: ¿símbolo o seña de algo mayor?</h3>
+    <p>
+      A primera vista, Lambda podría parecer un simple logo o elemento gráfico. Sin embargo, hay quienes lo interpretan como una señal, una especie de indicio que apunta a frecuencias ocultas o a mensajes codificados en el tejido mismo del entorno digital.
+    </p>
+    <p>
+      Se han realizado comparaciones entre momentos del juego y detalles donde aparece el símbolo, encontrando coincidencias que invitan a pensar en una comunicación subliminal. Aunque la prueba es escasa, la idea se ha difundido en varias discusiones en línea.
+    </p>
+    <p>
+      Cada relectura del símbolo genera nuevos interrogantes, y es precisamente esa ambigüedad la que estimula la curiosidad. Quizás en Lambda se esconda la clave para conectar todos estos elementos en un circuito mayor.
+    </p>
+    <img src="img/lambda.jpg" alt="Símbolo Lambda" class="post-img">
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.post-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+  </script>
+</body>
+</html>

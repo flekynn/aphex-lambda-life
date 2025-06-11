@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Resonancia Cuántica: ¿error o mensaje escondido?</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>Resonancia Cuántica: ¿un error o un mensaje escondido?</h3>
+    <p>
+      En Black Mesa y en otros sistemas del juego se han registrado fallas que trascienden lo meramente técnico. Varias personas aseguran que esos errores podrían ser mensajes codificados, filtrados a través de la tecnología.
+    </p>
+    <p>
+      Al revisar fragmentos de audio y secuencias visuales, se notan variaciones inesperadas que parecen deliberadas. Esta posibilidad ha sido comentada en distintos foros, aunque nada queda probado.
+    </p>
+    <p>
+      La ambigüedad en torno a estos "fallos" abre la discusión: ¿son simplemente errores o, por el contrario, se oculta un mensaje intencional para quienes saben mirar?
+    </p>
+    <img src="img/resonancia.jpg" alt="Resonancia Cuántica" class="post-img">
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.post-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+  </script>
+</body>
+</html>

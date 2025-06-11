@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gordon Freeman = Aphex Twin?</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>¿Será que el silencio de Freeman encierra a Aphex Twin?</h3>
+    <p>
+      Se comenta en ciertos círculos que el imponente silencio del protagonista de Half-Life podría esconder mensajes ocultos. Algunos apuntes antiguos sugieren que, en lugar de expresarse verbalmente, Freeman se comunica mediante matices y ruidos ambientales.
+    </p>
+    <p>
+      Diversos análisis han señalado momentos en el juego en los que la música distorsionada recuerda a ciertas pistas de Aphex Twin, como si ambos compartieran un código en común. No es una conclusión firme, pero los patrones se repiten en distintas secuencias.
+    </p>
+    <p>
+      Además, hay videos y documentos que comparan pausas del juego con fragmentos musicales. Esta coincidencia ha dado pie a debates en foros donde se insiste en la posibilidad de que ambos elementos estén conectados más allá de lo evidente.
+    </p>
+    <img src="img/gordon_freeman.jpg" alt="Gordon Freeman" class="post-img">
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.post-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+  </script>
+</body>
+</html>

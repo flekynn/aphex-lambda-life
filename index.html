@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Aphex Lambda Life: ¿Una verdad oculta?</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>Algo no cuadra...</h3>
+    <p>
+        Half-Life, Aphex Twin, Lambda... ¿serán simples coincidencias o hay algo más? Se recopilan fragmentos, anotaciones y detalles sueltos que podrían estar revelando un patrón que todavía no logramos descifrar del todo..
+    </p>
+    <p>
+      Durante años se han circulado rumores en foros y chats; algunos aseguran haber notado patrones, otros descubren coincidencias curiosas en imágenes, sonidos y cifras. Este sitio trata de compilar todas esas pistas dispersas.
+    </p>
+    <p>
+      La idea es invitar a la gente a analizar, debatir y, sobre todo, cuestionar lo que se da por sentada. Tal vez entre tanta duda se forme una teoría que nos haga ver las cosas desde otro ángulo.
+    </p>
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas | 
+    <a href="http://instagram.com/flekynn"> @flekynn</a> | 
+    <a href="http://instagram.com/niiko1.7"> @niiko1.7</a>
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+  </script>
+</body>
+</html>

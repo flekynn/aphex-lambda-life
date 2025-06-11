@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Expediente Xen: Apuntes dispersos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>Espacio Xen: abrir la mente</h3>
+    <p>
+      Este espacio reúne fragmentos, notas y recortes que no siguen un hilo conductor fijo. Varías observaciones describen Xen como un lugar con vibraciones propias, mientras otros lo ven como el eco de experimentos fallidos.
+    </p>
+    <p>
+      Se han incorporado testimonios, datos visuales y referencias a eventos puntuales del juego. La intención es dejar abierta la interpretación, para que cada lector pueda aportar su propio análisis sin que nada quede completamente resuelto.
+    </p>
+    <p>
+      Poco a poco, estos apuntes dispersos podrían conformar una narrativa más amplia o, al menos, ayudar a cuestionar las versiones oficiales y las interpretaciones comunes.
+    </p>
+    <img src="img/xen.jpg" alt="Espacio Xen" class="post-img">
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.post-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Headcrabs: ¿ritmo o simple caos?</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>Headcrabs: ¿tienen un ritmo o es puro desorden?</h3>
+    <p>
+      En diversas ocasiones se ha observado que al aparecer, los Headcrabs emiten sonidos que parecen tener un patrón rítmico determinado. Algunos creen que se trata de un mensaje en código, mientras otros lo consideran simplemente parte del caos ambiental del juego.
+    </p>
+    <p>
+      Se han analizado grabaciones y se detectaron posibles compases que coinciden con beats sutiles. Esa idea, aunque aún sin confirmar, ha generado debate en comunidades que insisten en que hay más de lo aparente.
+    </p>
+    <p>
+      Aunque la evidencia es complicada de interpretar, la posibilidad de que exista un mensaje oculto en sus sonidos invita a mirar más de cerca cada aparición. Es un detalle que suma a la sensación de misterio que permea todo el entorno del juego.
+    </p>
+    <img src="img/headcrab.jpg" alt="Headcrab" class="post-img">
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.post-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+  </script>
+</body>
+</html>

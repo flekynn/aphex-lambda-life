@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Black Mesa: ¿laboratorio avanzado o experimento casero?</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+  <div class="post">
+    <h3>Black Mesa: ¿un laboratorio de alta tecnología o un experimento casero?</h3>
+    <p>
+      Existen muchas teorías sobre Black Mesa. Por un lado, se le ve como el escenario de experimentos científicos avanzados; por otro, hay quienes sostienen que fue un proyecto improvisado, surgido entre recortes, apuntes y un ambiente de caos controlado.
+    </p>
+    <p>
+      Documentos, testimonios y análisis visuales han dado lugar a debates intensos: ¿se trata de un salto en la ciencia o de un experimento lleno de improvisaciones? La mezcla de alta tecnología con métodos rudimentarios parece ser parte del misterio.
+    </p>
+    <p>
+      Esta ambigüedad crea una atmósfera en la que cada descubrimiento invita a replantearse qué fue realmente Black Mesa y qué legado dejó en el imaginario colectivo.
+    </p>
+    <img src="img/black_mesa.jpg" alt="Black Mesa" class="post-img">
+  </div>
+
+  <footer>
+    Autores: Alcaraz Marcos, Centurion Nicolas
+  </footer>
+
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu-container').innerHTML = html;
+      })
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.post-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+  </script>
+</body>
+</html>
